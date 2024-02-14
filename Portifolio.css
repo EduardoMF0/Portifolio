@@ -142,7 +142,7 @@ nav > a:hover:after{
     filter: blur(3px);
     opacity: 0.8;
     position: absolute;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     min-width: 100%;
     z-index: -1;
@@ -150,12 +150,11 @@ nav > a:hover:after{
 }   
 
 .transition-ini{
-    height: 110vh;
+    height: 97%;
     width: 100%;
     margin-top: 13vh;
     position: absolute;
     background-color: #080808;
-    /* background: linear-gradient(0deg, rgba(8,8,8,1) 90%, rgba(255,255,255,0) 100%);    position: absolute; */
     top: -10vh;
     transform-origin: bottom;
     animation: des 3s linear;
@@ -272,12 +271,12 @@ svg .svg_blur{
 }
 
 .box-texto > p{
-    font-size: clamp(2.8em, 1.9vw, 5vw);
+    font-size: clamp(3em, 1.9vw, 5vw);
     margin-bottom: -4%;
 }
 
 .box-texto > :nth-child(2){
-    font-size: clamp(9em, 7em + 3vw, 20vw);
+    font-size: clamp(0.6vw + 9em, 7em + 3vw, 20vw);
     background: linear-gradient(150deg, rgba(0,255,0,1) 30%, rgba(99,68,235,1) 60%);
 -webkit-background: linear-gradient(150deg, rgba(0,255,0,1) 30%, rgba(99,68,235,1) 60%);
     background-clip: text;
@@ -294,9 +293,9 @@ svg .svg_blur{
 .container-bottoms{
     display: flex;
     justify-content: space-between;
-    width: 50%;    
-    margin-top: 5px;
-    gap: 100px;   
+    width: 55%;    
+    padding: 1% 2%;
+    gap: 36%;   
 }
 
 .bottoms{
@@ -304,11 +303,12 @@ svg .svg_blur{
     font-weight: 500;
     text-decoration: none;
     color: white;
-    border: 3px solid #1CFF1C;
+    border: 3px solid #6344EB;
     background-color: #080808;
     border-radius: 10px;
-    height:  2.5em;
-    width: 6em;
+    /* height:  2.5em;
+    width: 6em; */
+    padding: 3% 4%;
     position: relative;
 
     display: flex;
@@ -316,8 +316,24 @@ svg .svg_blur{
     align-items: center;
 } 
 
+.container-bottoms a:nth-child(1){
+    border-color:#1CFF1C    
+}
+
+.container-bottoms a:hover:nth-child(1){
+    background-color: #1CFF1C;
+    color: black;
+    font-weight: bold;
+    
+}
+
+.container-bottoms a:nth-child(2){
+    padding: 0% 11.6%;
+}
+
     .bottoms:hover{
         border-color: #6344EB;
+        background-color: #6344EB;
         font-weight: bolder;
     }
 /* ----------- FIM - HOME ----------- */
@@ -405,6 +421,7 @@ section .container-tec{
     display: inline-block;
     text-align: center;
     position: relative;
+    transform: translateY(10%);
 }
 
 .circulo-out{
@@ -412,19 +429,13 @@ section .container-tec{
     height: 200px;
     border: 4px solid #6344EB;
     border-radius: 200px;
+    box-shadow: 0px 0px 18px 1px rgba(99,68,235,1);
+-webkit-box-shadow: 0px 0px 18px 1px rgba(99,68,235,1);
+-moz-box-shadow: 0px 0px 18px 1px rgba(99,68,235,1);
 
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
-.circulo-out::before{
-    content: "";
-    width: 190px;
-    height: 190px;
-    border: 4px solid #6344EB;
-    border-radius: 200px;
-    position: absolute;
-    filter: blur(5px);
 }
 
 .circulo-in{
@@ -432,6 +443,9 @@ section .container-tec{
     height: 180px;
     border: 4px solid #1CFF1Ced;
     border-radius: 200px;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(28,255,28,1);
+-moz-box-shadow: 0px 0px 6px 0px rgba(28,255,28,1);
+box-shadow: 0px 0px 6px 0px rgba(28,255,28,1);
     
     display: flex;
     align-items: center;
@@ -465,12 +479,14 @@ section .container-tec{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-    height: 20vh;
+    overflow: hidden;
+    height: 105vh;
+    position: relative;
+    transition: height 1s;
 }
 
 .proj{
-    width: 35%;
+    width: 33%;
     height: auto;
     margin-top: 3%;
     min-width: 365px;
@@ -480,7 +496,7 @@ section .container-tec{
 }
 
 .proj h5{
-    font-size: calc(0.8rem + 1vw);
+    font-size: clamp(3.2em, 0.8rem + 1vw, 3vw);
     padding: 3px 5px;
     text-align: center;
 }
@@ -563,8 +579,9 @@ article img{
 }
 
 .nome-tec{
-    width: 6rem;
-    height:  2.4rem;
+    width: auto;
+    height: auto;
+    padding: 4% 25%;
     background-color: #070707;
     border: 0.5px solid #6344EB;
     border-radius: 5px;
@@ -573,10 +590,10 @@ article img{
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 7vh;
+    bottom: 47px;
 
     font-weight: bold;
-    font-size: clamp(1rem, 1rem + 0.5rem, 3.5vw);
+    font-size: clamp(2.4em, 0.3rem + 1vw, 3.5vw);
 }
 
 .hidden{
@@ -590,59 +607,87 @@ article img{
     border-radius: 10px;
     background-color: #070707;
     /* 16px */
-    font-size: clamp(1.2em, 1.3vw, 3vh);
+    font-size: clamp(3em, 1.3vw, 3vh);
     text-decoration: none;
     color:white;
     
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateY(0%);
 }
 
 .botao:hover{
     background-color: #6344EB;
     font-weight: bolder;
 }
+
+.mais_menos{
+    width: 100%;
+    margin-top: 3%;
+    align-items: center;
+    text-align: center;
+}
+
+.mais_menos span{
+    font-size: 15px;
+    border: 2px solid #6344EB;
+    padding: 6px 14px;
+    border-radius: 10px;
+}
+
+.mais_menos span:hover{
+    background-color:#6344EB ;
+    cursor: pointer;
+    font-weight: bolder;
+}
 /* ----------- FIM - PROJETOS ----------- */
 
+/* ----------- INICIO - FOOTER ----------- */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 9vh;
+    margin-top: 4%;
 
-/* Rodapé */
-
-footer .coisa{
-    width: 100%;
-    height: 90px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border:1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     }
-
-.showTop{
-    display: inline;
-}
+/* ----------- FIM - FOOTER ----------- */
 
 .toTop{
   position: fixed;
   top: 90%;
   right: 2%;
-  border: 0.5vh solid #1CFF1Ced;
+  border: 0.5vh solid #6344EB;
   border-radius: 100%;
   height: 7.5vh;
   width: 7.5vh;
-    display: none;
+  z-index: 1;
+  display: none;
+}
+
+.showTop{
+    display: inline;
 }
 
 .toTop:hover{
     cursor: pointer;
     border-color: #6344EB;
-    background-color: #6344EB;
+    box-shadow: 0px 0px 15px 1px rgba(99,68,235,1);
+-webkit-box-shadow: 0px 0px 15px 1px rgba(99,68,235,1);
+-moz-box-shadow: 0px 0px 15px 1px rgba(99,68,235,1);
+
   }
 
-.toTop::after{
+/* .toTop::after{
     content: "";
     position: absolute;
-    border: 0.4vh solid #1CFF1Ced;
+    border: 0.4vh solid #6344EB;
     border-radius: 100%;
     top:-5%;
     right: -5%;
@@ -652,7 +697,7 @@ footer .coisa{
 .toTop:hover:after{
     filter: blur(1.2vh);
     
-}
+} */
 
 .seta {
     border-left: 2vh solid transparent;
@@ -664,12 +709,17 @@ footer .coisa{
     transform: translateX(-50%);
   }
 
+/* ----------- SHOW/HIDDEN ----------- */
 .ativo{
     visibility:visible;
 }
 
 .hidden-elemen{
     opacity: 0;
+}
+
+.hidden-elemen-tec{
+    opacity: 1;
 }
 
 .show1{
@@ -685,26 +735,14 @@ footer .coisa{
 
 }
 
-.show3{
-    transform: translateY(13%);
-    transition: all 1s;
-
+.ver_mais{
+    height: auto;
 }
-.show4{
-    transform: translateY(13%);
-    transition: all 1s;
-
-}
-.show5{
-    transform: translateY(13%);
-    transition: all 1s;
-
-}    
 
 /* ----------- RESOLUÇÃO MAIOR ----------- */
-@media screen and (min-width: 2100px){
+@media screen and (min-width: 2000px){
     svg{
-        stroke-width: 14px;
+        stroke-width: 12px;
     }
 
     svg .svg_blur{
@@ -739,23 +777,6 @@ footer .coisa{
         border-width: 9px;
         border-radius: 20px;
     }
-
-    /* .bottoms{
-        font-size: clamp(14px, 1.5vw, 5vw);
-        font-weight: 500;
-        text-decoration: none;
-        color: white;
-        border: 3px solid #1CFF1C;
-        background-color: #080808;
-        border-radius: 10px;
-        height:  2.5em;
-        width: 6em;
-        position: relative;
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }  */
     
     .container-diagrama .texto-apresentacao{
         font-size: calc(0.5rem + 1.3vw);
@@ -804,7 +825,7 @@ footer .coisa{
     .bottoms{
 
         width:  calc(4em + 4vw);
-        height: calc(2.5em + 2.3vh);
+        height: calc(2.2em + 2.3vh);
         /* width: 11vw;
         height: 8vh;
 
@@ -814,15 +835,10 @@ footer .coisa{
 
     .container-bottoms{
         max-width: 45em;
-        width: 65%;
+        width: 72%;
     }
 }
-    /* .bottoms{
-        height:  calc(1.5em + 4vh);
-        width: clamp(7em, 3vw, 8vw);
-    }
-    }  */
-   
+
 @media screen and (max-width: 900px){
         svg{
             stroke-dashoffset: 225vw;
@@ -843,8 +859,28 @@ footer .coisa{
             height: 144px;
         }
 
-        .tec-usadas img{
-            width: 10%;
+        .showTop{
+            display: none;
+        }
+
+        .container-proj{
+            gap: 0;
+        }
+
+        .container-proj .proj{
+            margin: 10% 0%;
+        }
+
+        .proj p{
+            padding: 10px 13px;
+        }    
+
+        .container-proj article:last-child{
+            margin-bottom: 1%;
+        }
+
+        .mais_menos{
+            margin: 9% 0%;
         }
 } 
 
@@ -871,7 +907,7 @@ footer .coisa{
     .borda-out{
         margin-bottom: 2.5rem;
         padding: 1.5% 1.2%;
-        width: 39vw;
+        width: 45vw;
     }
     circle{
         r: 41vw;
@@ -881,4 +917,16 @@ footer .coisa{
         gap: 20px;
     }
 
+    .container-sobre .alinhamento{
+        padding: 4rem 1.5% 0px 1.5%;
+    }
+
+    .container-diagrama .texto-apresentacao{
+        padding: 12px 15px;
+    }
+
+    .container-proj .proj{
+        min-width: 0;
+        width: 88%;
+    }
 }
