@@ -24,13 +24,17 @@
 
         <header>
             <h1 class="logo">Portifólio</h1>
-            <div class="menu">
-                <nav>   
+            <div class="menu-mob">
+                <div class="barra-menu"></div>
+                <div class="barra-menu"></div>
+                <div class="barra-menu"></div>
+            </div>
+                <nav class="menu">   
                     <a href="#sobre_mim">Sobre Mim</a>
                     <a href="#tecnologias">Técnologias</a>
                     <a href="#projetos">Projetos</a>
                 </nav>  
-            </div>
+            
         </header>
     
     
@@ -40,7 +44,7 @@
                     </div>
                     
                     <div class="in">
-                        <svg>
+                        <svg class="svg-home">
                         <defs>
                             <linearGradient id="GradientColor">
                                 <stop offset="0%" stop-color="#00ff00" />
@@ -52,7 +56,7 @@
                             <circle cx="50%" cy="50%" r="44.3vh"/>
                         </svg>
 
-                        <svg>
+                        <svg class="svg-home">
                             <defs>
                                 <linearGradient id="GradientColor">
                                     <stop offset="35%" stop-color="#00ff00" />
@@ -67,7 +71,7 @@
                             <div class="box-texto">
                                 <p>Olá Mundo, me chamo</p>
                                 <h1>Eduardo</h1>
-                                <h1>Desenvolvedor Full-Stack</h1>
+                                <h1>Desenvolvedor <span>Full</span>-<span>Stack</span></h1>
                             </div>
                             <div class="container-bottoms">
                                 <a class="bottoms" href="http://www.google.com">LinkedIn</a>
@@ -245,12 +249,26 @@
             <div class="mais_menos"><span>Ver Mais</span></div>
     </section>
 
-    <div class="toTop"><div class="seta"></div></div> 
+    <div class="toTop"><div class="seta"></div></div>
+
+    <div class="side-blur"></div>
+    <div class="sidebar">   
+        <div id="fechar"></div>
+        <nav class="nav_side">   
+            <a class="links_side" href="#sobre_mim">Sobre Mim</a>
+            <a class="links_side" href="#tecnologias">Técnologias</a>
+            <a class="links_side" href="#projetos">Projetos</a>
+            <div>Redes/Contatos</div>
+        </nav>  
+    </div> 
+    <!-- <div class="side-blur"></div> -->
     
     <footer>
     </footer>
 
     </div>
+    </div>
+</div>
 
 </body>
 
