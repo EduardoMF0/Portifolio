@@ -795,6 +795,11 @@ footer {
     position: relative;
   }
 
+  .nav_side div img{
+    width: 26%;
+    position: absolute;    
+  }
+
   .nav_side:nth-child(1){
     border-top: 1px solid rgb(165 165 165 / 40%);
     margin-top: 7%;
