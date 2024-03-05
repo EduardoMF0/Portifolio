@@ -240,3 +240,25 @@ links_side.forEach(link => {
         sideBlur.classList.remove('side-blur-active');
     });
 });
+// ---------------------------------------------//
+
+// REDES/CONTATOS //
+
+var redes = document.querySelector('.redes');
+var lista_redes = document.querySelector('.lista-redes');
+var seta_redes = document.querySelector('.seta-redes');
+
+redes.addEventListener('click', function(){
+    if(lista_redes.style.display == "flex"){
+        lista_redes.style.display = "none";
+        seta_redes.classList.remove('anima-seta1');
+        seta_redes.classList.add('anima-seta2');
+    }
+    else{
+        lista_redes.style.display = "flex";
+        seta_redes.classList.remove('anima-seta2');
+        seta_redes.classList.add('anima-seta1');
+    }
+});
+
+// ---------------------------------------------//

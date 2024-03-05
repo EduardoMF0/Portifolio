@@ -112,7 +112,7 @@ header img{
 .menu-mob .barra-menu{
     width: 75%;
     height: 1px;
-    border-top: 2px solid red;
+    border-top: 2px solid;
     margin-top: 0.5px;
     display: block;
     padding: 1.8px;
@@ -448,7 +448,8 @@ section .container-tec{
     justify-content:center;
     align-items: center;
     gap: 5%;
-
+    width: 90%;
+    margin: 0 auto;
 }
 
 #tecnologias{
@@ -462,6 +463,7 @@ section .container-tec{
     text-align: center;
     position: relative;
     transform: translateY(10%);
+    margin-top: 9px;
 }
 
 .circulo-out{
@@ -469,9 +471,9 @@ section .container-tec{
     height: 200px;
     border: 4px solid #6344EB;
     border-radius: 200px;
-    box-shadow: 0px 0px 18px 1px rgba(99,68,235,1);
--webkit-box-shadow: 0px 0px 18px 1px rgba(99,68,235,1);
--moz-box-shadow: 0px 0px 18px 1px rgba(99,68,235,1);
+    box-shadow: 0px 0px 11px 1px rgba(99,68,235,1);
+-webkit-box-shadow: 0px 0px 11px 1px rgba(99,68,235,1);
+-moz-box-shadow: 0px 0px 11px 1px rgba(99,68,235,1);
 
     display: flex;
     align-items: center;
@@ -733,6 +735,8 @@ footer {
     transform: translateX(-50%);
   }
 
+/* ----------- INICIO - SIDEBAR ----------- */
+
   .sidebar{
     width: 45vw;
     height: 100dvh;
@@ -740,20 +744,12 @@ footer {
     right:-45%;
     top:0%;
     background-color: #161616;
-    z-index: 1;
-    
-    color: #1CFF1Ced;
-    font-size: calc(2vw + 0.9rem);
-    text-decoration: none;
+    z-index: 1;    
   }
 
   .sidebar.ativo-side{
     right: 0;
   }
-  
-  body.azul-background{
-    background-color: red;
- }
 
 .side-blur{
     width: 80vw;
@@ -781,29 +777,71 @@ footer {
     transition: all 0.4s;
 }
 
-  .nav_side a, .nav_side div{
+  .nav_side > a{
     display: block;
     padding: 10% 8%;
     margin-top: 2%;
     border-bottom: 1px solid rgb(165 165 165 / 40%);
   }
  
-  .links_side, .nav_side div {
+  .nav_side > a, .redes > p{
     color: #1CFF1Ced;
     font-size: clamp(15px ,2vw + 0.9rem, 18px);
     text-decoration: none;
     position: relative;
   }
 
-  .nav_side div img{
-    width: 26%;
-    position: absolute;    
+  .redes p {
+    display: flex;
+    align-items: center;
+    padding: 10% 8%;
+    margin-top: 2%;
+    border-bottom: 1px solid rgb(165 165 165 / 40%);
   }
 
-  .nav_side:nth-child(1){
-    border-top: 1px solid rgb(165 165 165 / 40%);
-    margin-top: 7%;
+  .redes p > img{
+    width: 23%;
   }
+  .anima-seta1{
+    transform: rotate(180deg);
+    transition:  transform 1s;
+  }
+  .anima-seta2{
+    transform: rotate(0deg);
+    transition:  transform 1s;
+  }
+
+
+  .lista-redes{
+    display: none;
+    flex-wrap: wrap;
+  }
+  .lista-redes::after{
+    content: "";
+    height: 2px;
+    width: 100%;
+    border-bottom: 1px solid rgb(165 165 165 / 40%);
+  }
+
+  .lista-redes img{
+    width: calc(40px + 2vw);
+  }
+
+  .lista-redes a{
+    padding: 3% 3%;
+    width: 49%;
+    list-style-type: none;
+    font-size: calc(1em + 6px);
+    letter-spacing: 1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column-reverse
+
+  }
+
+/* ----------- FIM - SIDEBAR ----------- */
 
 /* ----------- SHOW/HIDDEN ----------- */
 .ativo{
@@ -1107,6 +1145,9 @@ footer {
         .circulo-out{
             width: 160px;
             height: 160px;
+            box-shadow: 0px 0px 7px 1px rgba(99,68,235,1);
+            -webkit-box-shadow: 0px 0px 7px 1px rgba(99,68,235,1);
+            -moz-box-shadow: 0px 0px 7px 1px rgba(99,68,235,1);
         }
         
         .circulo-in{
@@ -1120,6 +1161,10 @@ footer {
 
         .container-proj{
             gap: 0;
+        }
+
+        #projetos{
+            margin-top: 8%;
         }
 
         .container-proj .proj{
